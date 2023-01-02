@@ -153,16 +153,23 @@
 		<tr>
 			<td>{message.username}</td>
 			<td>{message.message}</td>
-			<!-- <td>
+			<td class="message-links">
 				{#each links(message.message) as link}
 					<a href={link.url}>{link.url}</a>
 				{/each}
-			</td> -->
+			</td>
 		</tr>
 	{/each}
 </table>
 
 <style>
 	.toolbar {
+		position: sticky;
+		top: 0;
+		left: 0;
+		background: white;
+	}
+	.message-links a {
+		display: block;
 	}
 </style>
